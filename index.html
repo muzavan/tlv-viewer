@@ -1,14 +1,36 @@
 <html>
-    <head>
-        <title>
-            TLV Viewer
-        </title>
-    </head>
-    <body>
-        <div id="main">
 
+<head>
+    <title>
+        TLV Viewer
+    </title>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="App">
+        <h4> TLV Viewer </h4>
+        Make your <a href="https://en.wikipedia.org/wiki/Type%E2%80%93length%E2%80%93value">TLV</a>
+        (Tag/Type-Length-Value) prettier and easier to read!
+        <br/>
+        <sub>
+            Created by <a href="https://twitter.com/DevIrvanda">@DevIrvanda</a>.
+            Star/Raise Issue on <a href="https://github.com/muzavan/tlv-viewer">Github</a>!
+        </sub>
+        <div>
+            <textarea id="payload"></textarea>
         </div>
-        <script type="javascript" src="index.js">
-        </script>
-    </body>
+        <div>
+            <button id="prettierBtn" class="btn">Pretty, please!</button>
+        </div>
+        <div>
+            <sub id="oops" hidden>Oops! It seems that the text you pasted does not comply with TLV encoding &#x1F648</sub>
+            <sub id="great" hidden>Here you go &#x1F525</sub>
+            <pre id="resultBox" hidden><code id="result" class="language-json"></code></pre>
+        </div>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
+
 </html>

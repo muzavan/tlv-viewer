@@ -94,6 +94,25 @@ class TLV {
     }
 }
 
-const qrisPayload = "00020101021126650013ID.CO.BCA.WWW011893600014000094045502150008850009404550303UMI51440014ID.CO.QRIS.WWW0215ID20200340732190303UMI5204821153033605802ID5921YAY KASIH PENGHARAPAN6008SURABAYA61056019562070703A01630424E2";
-const {result, ok} = TLV.GetAsObjects(qrisPayload);
-console.log({result, ok});
+const samplePayload = "00020101021126610014COM.GO-JEK.WWW01189360091434630238780210G4630238780303URE51440014ID.CO.QRIS.WWW0215ID10190118844820303URE5204866153033605802ID5917Masjid Salman ITB6007Bandung61054013262070703A016304F72C";
+document.getElementById("payload").value = samplePayload;
+
+document.getElementById("prettierBtn").onclick = () => {
+    const payload = document.getElementById("payload").value.trim();
+    const {result, ok} = TLV.GetAsObjects(payload);
+
+    if (!ok) {
+        document.getElementById("oops").hidden = false;
+        document.getElementById("great").hidden = true;
+        document.getElementById("result").hidden = true;
+        document.getElementById("resultBox").hidden = true;
+        return;
+    }
+
+    document.getElementById("oops").hidden = true;
+    document.getElementById("great").hidden = false;
+    document.getElementById("resultBox").hidden = false;
+    document.getElementById("result").hidden = false;
+    document.getElementById("result").textContent = JSON.stringify(result, undefined, 4);
+    return;
+}

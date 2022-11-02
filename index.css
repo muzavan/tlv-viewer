@@ -1,0 +1,47 @@
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: aliceblue;
+}
+
+div {
+  margin: 8px;
+}
+
+.App {
+  text-align: center;
+  align-content: center;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+  border: 3px solid #111111;
+  width: 30%;
+  height: 200;
+}
+
+pre {
+  text-align: center;
+  align-content: center;
+}
+
+code {
+  width: 80%;
+  background-color: #efefef;
+  text-align: left;
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  border: 3px solid #111111;
+}
+
+.btn {
+  font-weight: 700;
+  border: 3px solid #111111;
+  font-size: 12pt;
+  padding: 3px;
+  background-color: #679b9b;
+  color: #111111;
+}
